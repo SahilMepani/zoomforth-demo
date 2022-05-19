@@ -1,0 +1,42 @@
+
+
+.bg-video {
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+  position: absolute;
+  left: 50%; /* % of surrounding element */
+  top: 50%;
+  transform: translate(-50%, -50%); /* % of current element */
+}
+
+.bg-cover {
+	@include bg-cover;
+}
+
+.text-highlight {
+  background-color: $text-selection-bg-color;
+  color: $text-selection-color;
+}
+
+/*----------  Required  ----------*/
+.z-10 {
+  z-index: 10;
+}
+
+.position-absolute-cover {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.list-unstyled {
+  margin-left: 0;
+  margin-top: 0;
+  > li {
+    list-style: none;
+  }
+}

@@ -1,0 +1,106 @@
+$utilities_overwrite: (
+  "font-weight": (
+    property: font-weight,
+    class: fw,
+    values: (
+      lighter: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+    )
+  ),
+  "width": (
+    property: width,
+    class: w,
+    responsive : true,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "max-width": (
+    property: max-width,
+    class: maxw,
+    responsive : true,
+    values: (
+      50: 50%,
+      100: 100%,
+      none: none
+    )
+  ),
+  "hover-color": (
+    property: color,
+    state: hover,
+    class: text,
+    values: map-merge(
+      $theme-colors,
+      (
+        "body": $body-color,
+        "reset": inherit,
+      )
+    )
+  ),
+  "container-half-width": (
+    property: width,
+    class: container,
+    responsive : true,
+    values: (
+      half-width: var(--container-half-width),
+    )
+  ),
+  "container-margin-start": (
+    property: margin-left,
+    class: container-margin,
+    responsive : true,
+    values: (
+      start: var(--container-margin-x),
+    )
+  ),
+  "container-margin-end": (
+    property: margin-right,
+    class: container-margin,
+    responsive : true,
+    values: (
+      end: var(--container-margin-x),
+    )
+  ),
+  // end custom utility
+  // comment or the default utilities you want to use
+  // "font-weight": (
+  //   property: font-weight,
+  //   class: fw,
+  //   values: (
+  //     light: $font-weight-light,
+  //     lighter: $font-weight-lighter,
+  //     normal: $font-weight-normal,
+  //     bold: $font-weight-bold,
+  //     bolder: $font-weight-bolder
+  //   )
+  // ),
+  "shadow": null,
+  // border generally used for table, null if you want to disble border-* classes
+  // "border"                 : null,
+  // "border-top"             : null,
+  // "border-end"             : null,
+  // "border-bottom"          : null,
+  // "border-start"           : null,
+  // "border-color"           : null,
+  // "border-width"           : null,
+  "negative-margin-x"      : null,
+  "negative-margin-y"      : null,
+  "negative-margin-top"    : null,
+  "negative-margin-end"    : null,
+  "negative-margin-bottom" : null,
+  "negative-margin-start"  : null,
+  "rounded"                : null,
+  "rounded-top"            : null,
+  "rounded-end"            : null,
+  "rounded-bottom"         : null,
+  "rounded-start"          : null,
+);
+
+$utilities: map-merge( $utilities, $utilities_overwrite );
